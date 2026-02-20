@@ -199,6 +199,16 @@ td, th {
   content: "î˜‚";
 }
 
+/* CSS hamburger icon - replaces broken font icon for mobile menu */
+.menu-icon-hamburger {
+  width: 24px;
+  height: 2px;
+  background: currentColor;
+  box-shadow: 0 8px 0 0 currentColor, 0 -8px 0 0 currentColor;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
 .w-icon-arrow-down:before, .w-icon-dropdown-toggle:before {
   content: "î˜ƒ";
 }
@@ -6152,59 +6162,6 @@ figcaption {
     padding-bottom: .9em;
   }
 
-  .menu-icon-hamburger {
-    width: 24px;
-    height: 18px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .menu-icon-hamburger::before,
-  .menu-icon-hamburger::after {
-    content: '';
-    display: block;
-    height: 2px;
-    background: currentColor;
-    border-radius: 1px;
-  }
-  .menu-icon-hamburger::before {
-    box-shadow: 0 8px 0 0 currentColor;
-  }
-  .menu-icon-hamburger::after {
-    box-shadow: none;
-  }
-  .menu-icon-hamburger {
-    background: linear-gradient(to bottom, currentColor 2px, transparent 2px);
-    background-size: 100% 8px;
-    background-repeat: no-repeat;
-    background-position: 0 50%;
-  }
-  .menu-icon-hamburger::before,
-  .menu-icon-hamburger::after {
-    content: '';
-    display: block;
-    height: 2px;
-    background: currentColor;
-    border-radius: 1px;
-  }
-  .menu-icon-hamburger::before {
-    transform: translateY(-8px);
-  }
-  .menu-icon-hamburger::after {
-    transform: translateY(6px);
-  }
-  .menu-button .menu-icon-hamburger {
-    width: 24px;
-    height: 2px;
-    background: currentColor;
-    border: none;
-    box-shadow: 0 8px 0 0 currentColor, 0 -8px 0 0 currentColor;
-  }
-  .menu-button .menu-icon-hamburger::before,
-  .menu-button .menu-icon-hamburger::after {
-    display: none;
-  }
   .menu-button {
     color: var(--paragraphs);
     border-radius: 50em;
