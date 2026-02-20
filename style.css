@@ -3862,30 +3862,29 @@ figcaption {
   align-items: center;
   display: flex;
   flex-wrap: nowrap;
+  gap: 4em;
 }
-.logo-client-wrap {
+.card1{
+  align-items: flex-end;
+}
+.logo-client-box {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 5em;
-  height: 5em;
-  min-width: 5em;
-  min-height: 5em;
-  margin-left: 2.5em;
-  margin-right: 2.5em;
-  overflow: hidden;
+  width: 7em;
+  height: 7em;
+  min-width: 7em;
+  min-height: 7em;
 }
 .logo-client {
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 5em;
+  width: auto;
+  max-width: 7em;
+  object-fit: contain;
   object-position: center;
   filter: brightness(0) invert(1);
-}
-.card1{
-  align-items: flex-end;
 }
 .new-img{
   width: 320px;
@@ -6153,6 +6152,59 @@ figcaption {
     padding-bottom: .9em;
   }
 
+  .menu-icon-hamburger {
+    width: 24px;
+    height: 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .menu-icon-hamburger::before,
+  .menu-icon-hamburger::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: currentColor;
+    border-radius: 1px;
+  }
+  .menu-icon-hamburger::before {
+    box-shadow: 0 8px 0 0 currentColor;
+  }
+  .menu-icon-hamburger::after {
+    box-shadow: none;
+  }
+  .menu-icon-hamburger {
+    background: linear-gradient(to bottom, currentColor 2px, transparent 2px);
+    background-size: 100% 8px;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+  }
+  .menu-icon-hamburger::before,
+  .menu-icon-hamburger::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: currentColor;
+    border-radius: 1px;
+  }
+  .menu-icon-hamburger::before {
+    transform: translateY(-8px);
+  }
+  .menu-icon-hamburger::after {
+    transform: translateY(6px);
+  }
+  .menu-button .menu-icon-hamburger {
+    width: 24px;
+    height: 2px;
+    background: currentColor;
+    border: none;
+    box-shadow: 0 8px 0 0 currentColor, 0 -8px 0 0 currentColor;
+  }
+  .menu-button .menu-icon-hamburger::before,
+  .menu-button .menu-icon-hamburger::after {
+    display: none;
+  }
   .menu-button {
     color: var(--paragraphs);
     border-radius: 50em;
@@ -6200,13 +6252,19 @@ figcaption {
     padding-bottom: 4.5em;
   }
 
-  .logo-client-wrap {
-    width: 2.5em;
-    height: 2.5em;
-    min-width: 2.5em;
-    min-height: 2.5em;
-    margin-left: 2.2em;
-    margin-right: 2.2em;
+  .clients {
+    gap: 2.5em;
+  }
+
+  .logo-client-box {
+    width: 3.5em;
+    height: 3.5em;
+    min-width: 3.5em;
+    min-height: 3.5em;
+  }
+  .logo-client {
+    height: 2.8em;
+    max-width: 3.5em;
   }
 
   .grid {
@@ -6519,13 +6577,19 @@ figcaption {
     padding-bottom: 3.5em;
   }
 
-  .logo-client-wrap {
-    width: 2em;
-    height: 2em;
-    min-width: 2em;
-    min-height: 2em;
-    margin-left: 1.8em;
-    margin-right: 1.8em;
+  .clients {
+    gap: 2em;
+  }
+
+  .logo-client-box {
+    width: 4.5em;
+    height: 4.5em;
+    min-width: 4.5em;
+    min-height: 4.5em;
+  }
+  .logo-client {
+    height: 3.5em;
+    max-width: 4.5em;
   }
 
   .block {
