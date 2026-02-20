@@ -3861,14 +3861,31 @@ figcaption {
   justify-content: flex-start;
   align-items: center;
   display: flex;
+  flex-wrap: nowrap;
+}
+.logo-client-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 5em;
+  height: 5em;
+  min-width: 5em;
+  min-height: 5em;
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+  overflow: hidden;
+}
+.logo-client {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0) invert(1);
 }
 .card1{
   align-items: flex-end;
-}
-.logo-client {
-  max-height: 8.7em;
-  margin-left: 2.5em;
-  margin-right: 2.5em;
 }
 .new-img{
   width: 320px;
@@ -3880,6 +3897,9 @@ figcaption {
   bottom: 0%;
   left: 0%;
   right: 0%;
+  background: linear-gradient(135deg, #FF9900 0%, #FF0000 100%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
 }
 
 .button-small {
@@ -4179,7 +4199,6 @@ figcaption {
 }
 
 .logo-footer {
-  /* filter: grayscale(90%); */
   height: 3.6em;
   margin-bottom: 1.8em;
 }
@@ -6181,8 +6200,11 @@ figcaption {
     padding-bottom: 4.5em;
   }
 
-  .logo-client {
-    max-height: 2em;
+  .logo-client-wrap {
+    width: 2.5em;
+    height: 2.5em;
+    min-width: 2.5em;
+    min-height: 2.5em;
     margin-left: 2.2em;
     margin-right: 2.2em;
   }
@@ -6497,8 +6519,11 @@ figcaption {
     padding-bottom: 3.5em;
   }
 
-  .logo-client {
-    max-height: 1.7em;
+  .logo-client-wrap {
+    width: 2em;
+    height: 2em;
+    min-width: 2em;
+    min-height: 2em;
     margin-left: 1.8em;
     margin-right: 1.8em;
   }
